@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katherine Scanlon Cooley, PhD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #555555;
+    --paper: #ffffff;
+    --paper-alt: #f3f3f2;
+    --accent: #8a3a2a;
+    --accent-soft: #b85a3e;
+    --line: #e5e5e3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: 'Fraunces', Georgia, serif; }
+
+  /* Nav */
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    z-index: 100;
+    padding: 1.25rem 0;
+  }
+  nav .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .logo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  nav ul { list-style: none; display: flex; gap: 2.5rem; }
+  nav a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--accent); }
+
+  /* Hero */
+  .hero {
+    padding: 7rem 2rem 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .hero .eyebrow {
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.9rem, 4vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 1.75rem;
+    max-width: 22ch;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+  }
+  .hero .lead {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    font-weight: 400;
+    line-height: 1.65;
+  }
+  .hero .credentials {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .hero .cv-link {
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+  .hero .cv-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
+  .hero .cred {
+    font-size: 0.85rem;
+  }
+  .hero .cred .label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    font-size: 0.72rem;
+    margin-bottom: 0.35rem;
+    font-weight: 500;
+  }
+  .hero .cred .value {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+  }
+
+  /* Section base */
+  section { padding: 6rem 2rem; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.6rem, 2.8vw, 2.15rem);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 2.5rem;
+    max-width: 28ch;
+  }
+
+  /* About */
+  .about { background: var(--paper-alt); }
+  .about .grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+ .about .photo {
+  aspect-ratio: 1/1;
+  width: 240px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+  display: block;
+  }
+  .about p {
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.35rem;
+    max-width: 64ch;
+    line-height: 1.7;
+  }
+  .about p:first-of-type {
+    font-size: 1.05rem;
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1.55;
+  }
+
+  /* Work areas */
+  .work .areas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .area {
+    padding: 3rem 2.5rem 3rem 0;
+    border-bottom: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    transition: background 0.3s;
+  }
+  .area:last-child { border-right: none; padding-right: 0; }
+  .area:nth-child(2) { padding-left: 2.5rem; }
+  .area:nth-child(3) { padding-left: 2.5rem; }
+  .area .number {
+    font-family: 'Fraunces', serif;
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  .area h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+  .area p {
+    color: var(--ink-soft);
+    margin-bottom: 1.25rem;
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+  .area a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+    font-weight: 500;
+  }
+  .area a:hover { color: var(--accent); }
+
+  /* Selected work */
+  .selected { background: var(--ink); color: var(--paper); }
+  .selected .section-label { color: var(--accent-soft); }
+  .selected .section-title { color: var(--paper); }
+  .selected .items {
+    display: grid;
+    gap: 0;
+  }
+  .item {
+    display: grid;
+    grid-template-columns: 0.4fr 2fr 0.6fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    align-items: baseline;
+  }
+  .item:last-child { border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .item .year {
+    font-family: 'Fraunces', serif;
+    color: var(--accent-soft);
+    font-size: 0.95rem;
+  }
+  .item .title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  .item .title em { font-style: italic; }
+  .item .meta {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .item-actions {
+    margin-top: 0.7rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .item-action {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent-soft);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(184, 90, 62, 0.4);
+    padding-bottom: 2px;
+  }
+  .item-action:hover { color: var(--paper); border-bottom-color: var(--paper); }
+  .item-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    font-style: italic;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    padding: 8rem 2rem;
+  }
+  .cta h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1.75rem;
+    max-width: 24ch;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: -0.01em;
+  }
+  .cta h2 em { font-style: italic; }
+  .cta p {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    max-width: 54ch;
+    margin: 0 auto 2.5rem;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  .button {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1.1rem 2.5rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .button:hover { background: var(--accent); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 3rem 2rem 2rem;
+    background: var(--paper-alt);
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+  footer .name { font-family: 'Fraunces', serif; font-size: 1rem; color: var(--ink); }
+  footer a { color: var(--ink-soft); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 768px) {
+    nav ul { display: none; }
+    .hero { padding: 4rem 1.5rem 3rem; }
+    section { padding: 4rem 1.5rem; }
+    .about .grid { grid-template-columns: 1fr; gap: 2rem; }
+    .about .photo { width: 180px; }
+    .work .areas { grid-template-columns: 1fr; }
+    .area { padding: 2.5rem 0 !important; border-right: none !important; }
+    .item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .item .meta { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="logo">Katherine Scanlon Cooley<span style="color: var(--ink-soft); font-weight: 400;">, PhD</span></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Scholar &middot; Practitioner &middot; Educator</div>
+  <h1>Embodiment, performance, and the <em>science</em> of the lived body.</h1>
+  <p class="lead">Integrative health researcher and educator exploring how somatic awareness, stress physiology, and embodied experience shape resilience and well-being &mdash; across athletic, clinical, and educational contexts.</p>
+
+  <div class="credentials">
+    <div class="cred">
+      <div class="label">Doctorate</div>
+      <div class="value">PhD, Integrative Medicine &amp; Health Science</div>
+    </div>
+    <div class="cred">
+      <div class="label">Faculty</div>
+      <div class="value">Saybrook University</div>
+    </div>
+    <div class="cred">
+      <div class="label">Athletics</div>
+      <div class="value">USA National Team &middot; World Gold Medalist</div>
+    </div>
+    <div class="cred">
+      <div class="label">Based in</div>
+      <div class="value">Spokane, WA</div>
+    </div>
+  </div>
+  <a href="Katherine-Scanlon-Cooley-CV.pdf" class="cv-link">Download full CV &rarr;</a>
+</header>
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="grid">
+      <img class="photo" src="IMG_5264.jpg" alt="Dr. Katherine Scanlon Cooley"></div>
+      <div>
+        <div class="section-label">About</div>
+        <p>I work at the intersection of integrative health science and embodied practice &mdash; as a researcher, faculty member, and clinician.</p>
+        <p>My scholarship examines embodiment as a central dimension of human development: how physiological processes, lived bodily experience, and cultural narratives interact to shape health, identity, and performance. Current areas of inquiry include interoception and psychophysiological regulation in athletic environments, chronic tension, and contemplative models of learning.</p>
+        <p>Before doctoral research, I rowed for the United States National Team for six years, earning gold at the World Rowing Championships in 1995. That background continues to inform how I think about high performance &mdash; what the body knows, what the nervous system carries, and what training systems often miss.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="work">
+  <div class="container">
+    <div class="section-label">Areas of Work</div>
+    <h2 class="section-title">The mind-body keeps the score.</h2>
+    <div class="areas">
+      <div class="area">
+        <div class="number">01 &mdash; Research</div>
+        <h3>Embodiment &amp; performance research</h3>
+        <p>Peer-reviewed work on stress regulation, breathwork, and the somatic dimensions of identity. Current study: <em>Athletic Bypass</em> &mdash; a phenomenological inquiry into emotional suppression in sport culture.</p>
+        <p style="margin-top: 1rem; font-size: 0.92rem;">Methodologist for doctoral candidates in integrative social work, mind-body medicine, and sport psychology.</p>
+        <a href="#writing">Read selected work &rarr;</a>
+      </div>
+      <div class="area">
+        <div class="number">02 &mdash; Teaching</div>
+        <h3>Graduate &amp; professional education</h3>
+        <p>Adjunct faculty at Saybrook University teaching Intermediate Coaching, Advanced Coaching Practicum, and Mind-Body Therapies. Program developer of the Terra Incognita seminar series on integrative medicine.</p>
+        <a href="#teaching">Courses &amp; programs &rarr;</a>
+      </div>
+      <div class="area">
+        <div class="number">03 &mdash; Practice</div>
+        <h3>Applied somatic education</h3>
+        <p><strong>Plumb Method</strong> &mdash; an app-delivered movement and embodiment practice for high-achieving women who want to get back into their bodies. On-demand sessions plus a weekly livestream class. <em>Pilot now recruiting.</em></p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">Limited monthly in-person offerings continue through Joy Yoga Project in Spokane, grounded in Katonah Yoga&reg; methodology.</p>
+        <a href="https://plumbmethod.com/quiz" style="margin-top: 0.5rem; display: inline-block;">Take the Plumb Type quiz &rarr;</a>
+        <a href="https://plumbmethod.com" style="margin-top: 0.5rem; display: inline-block; margin-left: 1.25rem;">plumbmethod.com &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="writing" class="selected">
+  <div class="container">
+    <div class="section-label">Selected Work</div>
+    <h2 class="section-title">Recent writing, programs, and presentations.</h2>
+    <div class="items">
+      <div class="item">
+        <div class="year">2026</div>
+        <div class="title"><em>Athletic Bypass:</em> A Phenomenological Study of Emotional Suppression in Sport Culture</div>
+        <div class="meta">Study &middot; In IRB review</div>
+      </div>
+      <div class="item">
+        <div class="year">2026</div>
+        <div class="title">
+          <em>The Song in Our Bones:</em> Embodiment, Meaning, and the Mind&ndash;Body Practices of Katonah Yoga
+          <div class="item-actions">
+            <a href="#" class="item-action">Read a sample &rarr;</a>
+          </div>
+        </div>
+        <div class="meta">Book &middot; In preparation</div>
+      </div>
+      <div class="item">
+        <div class="year">2025&ndash;</div>
+        <div class="title">Doctoral committee methodologist &mdash; Integrative Social Work, Mind&ndash;Body Medicine, Sport &amp; Performance Psychology</div>
+        <div class="meta">Advising</div>
+      </div>
+      <div class="item">
+        <div class="year">2025</div>
+        <div class="title">
+          Heuristic Inquiry into Embodiment in Eating Disorder Recovery
+          <div class="item-actions">
+            <a href="https://www.proquest.com/docview/3192037421" target="_blank" rel="noopener" class="item-action">Read on ProQuest &rarr;</a>
+            <span class="item-note">paywalled &mdash; email for a copy</span>
+          </div>
+        </div>
+        <div class="meta">Doctoral dissertation</div>
+      </div>
+      <div class="item">
+        <div class="year">2025</div>
+        <div class="title">Terra Incognita: Embodiment and Integrative Medicine Seminar Series</div>
+        <div class="meta">Curriculum &middot; Spokane</div>
+      </div>
+      <div class="item">
+        <div class="year">2023</div>
+        <div class="title">
+          Breathing Practices for Stress and Anxiety Reduction: A Systematic Review
+          <div class="item-actions">
+            <a href="https://www.mdpi.com/2076-3425/13/12/1612" target="_blank" rel="noopener" class="item-action">Read the article &rarr;</a>
+          </div>
+        </div>
+        <div class="meta">Brain Sciences &middot; Peer-reviewed</div>
+      </div>
+      <div class="item">
+        <div class="year">2022&ndash;23</div>
+        <div class="title">Somatic Grief Work Series</div>
+        <div class="meta">Program &middot; Multi-session</div>
+      </div>
+      <div class="item">
+        <div class="year">2018&ndash;25</div>
+        <div class="title">The Complete Back: Clinical Somatic Education Workshop</div>
+        <div class="meta">Recurring workshop</div>
+      </div>
+      <div class="item">
+        <div class="year">2016</div>
+        <div class="title">Stress Response Training for Psychiatry Residents</div>
+        <div class="meta">University of Washington Psychiatry Residency</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="container">
+    <h2>Interested in collaborating, teaching together, or <em>working with me</em>?</h2>
+    <p>I take a limited number of individual clients and welcome inquiries from researchers, programs, and athletes whose work touches embodiment, performance, or integrative health.</p>
+    <a href="mailto:cooley.katherine@gmail.com" class="button">Get in touch</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="name">Katherine Scanlon Cooley, PhD</div>
+      <div style="margin-top: 0.5rem;">Spokane, WA &middot; <a href="mailto:cooley.katherine@gmail.com">cooley.katherine@gmail.com</a></div>
+    </div>
+    <div>
+      <a href="https://plumbmethod.com">Plumb Method</a> &nbsp;&middot;&nbsp;
+      <a href="https://www.joyyogaproject.com">Joy Yoga Project</a> &nbsp;&middot;&nbsp;
+      <a href="https://www.linkedin.com/in/scanloncooley">LinkedIn</a> &nbsp;&middot;&nbsp;
+      <a href="https://www.saybrook.edu/faculty/byname/katherine_cooley/">Saybrook Faculty</a>
+    </div>
+    <div style="opacity: 0.6;">&copy; 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>
