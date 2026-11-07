@@ -190,7 +190,7 @@
   /* Work areas */
   .work .areas {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0;
     border-top: 1px solid var(--line);
   }
@@ -264,6 +264,11 @@
   .selected { background: var(--ink); color: var(--paper); }
   .selected .section-label { color: var(--accent-soft); }
   .selected .section-title { color: var(--paper); }
+  .selected .items-label {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.16em;
+    color: var(--accent-soft); margin: 2.5rem 0 0.75rem;
+  }
+  .selected .items + .items-label { margin-top: 3.5rem; }
   .selected .items {
     display: grid;
     gap: 0;
@@ -417,7 +422,7 @@
   <div class="credentials">
     <div class="cred">
       <div class="label">Doctorate</div>
-      <div class="value">PhD, Integrative Medicine &amp; Health Science</div>
+      <div class="value">PhD, Mind-Body Medicine &middot; 2025</div>
     </div>
     <div class="cred">
       <div class="label">Faculty</div>
@@ -437,6 +442,7 @@
       <img class="photo" src="IMG_5264.jpg" alt="Dr. Katherine Scanlon Cooley"></div>
       <div>
         <div class="section-label">About</div>
+        <p>I approach the body not merely as an object of study, but as a participant in knowing.</p>
         <p>My scholarship brings phenomenology, qualitative inquiry, and somatic education into conversation, with particular interests in embodied self-understanding, habitual patterns, and the relationship between emotional experience and bodily life.</p>
         <p>I teach graduate students at Saybrook University, mentor doctoral researchers, and develop interdisciplinary curricula that bring scholarly inquiry into contact with embodied practice.</p>
       </div>
@@ -472,8 +478,10 @@
         <div class="number">01 &mdash; Teaching</div>
         <h3>Teaching &amp; doctoral mentorship</h3>
         <p>My teaching begins with listening &mdash; to students, to the questions emerging in their work, and to the forms of knowing that are not yet fully articulated.</p>
-        <p>At Saybrook University, I teach graduate courses in mind-body medicine, imagery, movement modalities, and integrative wellness coaching. I also serve on doctoral dissertation committees as a methodologist and advise students developing their qualifying research.</p>
         <p>My approach brings methodological rigor together with experiential learning, supporting students as they develop their scholarly voice and investigate the relationship between lived experience and theoretical understanding.</p>
+        <p class="area-sub">At Saybrook University, since 2020</p>
+        <p><strong>Courses:</strong> Imagery for Health; Mind-Body Therapies and Practices; Movement Modalities for Health; Evidence-Based Coaching; Intermediate and Advanced Integrative Wellness Coaching.</p>
+        <p>Facilitator of the required Mind, Body, Spirit Integration groups since 2021. Faculty in the Consciousness, Spirituality, and Integrative Health doctoral program, advising students at the qualifying-essay stage. Dissertation committee methodologist.</p>
         <p class="area-sub">Selected original curriculum</p>
         <p><strong>The Practice Path</strong> &mdash; a 16-class somatic education program integrating phenomenology, Taoist philosophy, movement, reflective writing, and embodied inquiry. The curriculum explores how somatic resources can help reorganize perception and habitual patterns of responding.</p>
         <a href="https://www.saybrook.edu/faculty/byname/katherine_cooley/" target="_blank" rel="noopener">Saybrook faculty page &rarr;</a>
@@ -481,20 +489,12 @@
       <div class="area">
         <div class="number">02 &mdash; Research</div>
         <h3>Embodied experience &amp; psychological life</h3>
-        <p><strong>Embodied experience and psychological life.</strong> My doctoral research, a heuristic inquiry into embodiment in eating disorder recovery, and the Self-Emergence Framework that came out of it; questions of self-alienation and emotional experience.</p>
-        <p><strong>Qualitative and first-person methodology.</strong> Heuristic self-search inquiry in the tradition of Sandy Sela-Smith, phenomenology, and mentoring doctoral researchers in these methods.</p>
-        <p><strong>Somatic education and embodied learning.</strong> My book, original curricula, and work connecting somatic traditions with psychological inquiry.</p>
-        <p class="area-sub">Emerging project</p>
-        <p><em>Athletic Bypass</em> &mdash; a phenomenological study of emotional suppression in sport culture, now in process.</p>
+        <p>My research asks how the felt, pre-reflective body can be known and articulated within rigorous inquiry.</p>
+        <p>My dissertation, a heuristic self-search inquiry into eating disorder recovery through yoga and somatic practice, found that recovery turned less on body image than on the prolonged censoring of emotion and its physiological consequences, a process I describe as <em>othering the body</em>. From it I developed the <strong>Self-Emergence Framework</strong>: emotional becoming, somatic becoming, bodily un-doing, and self-emergence.</p>
+        <p>Next, I plan interpretative phenomenological and hermeneutic studies, with co-researchers, of embodied recovery and positive embodiment.</p>
+        <p class="area-sub">In preparation</p>
+        <p>Cooley, K. S. Beyond co-researchers: Heuristic self-search inquiry and the contributions of Sandy Sela-Smith. In preparation for submission to <em>Journal of Humanistic Psychology</em>.</p>
         <a href="#writing">Read selected work &rarr;</a>
-      </div>
-      <div class="area">
-        <div class="number">03 &mdash; Practice</div>
-        <h3>Applied somatic education</h3>
-        <p><strong>Plumb Method</strong> &mdash; an app-delivered movement and embodiment practice for high-achieving women who want to get back into their bodies. On-demand sessions plus a weekly livestream class. <em>Pilot now recruiting.</em></p>
-        <p style="margin-top: 1rem; font-size: 0.85rem;">Limited monthly in-person offerings continue through Joy Yoga Project in Spokane, grounded in Katonah Yoga&reg; methodology.</p>
-        <a href="https://plumbmethod.com/quiz" style="margin-top: 0.5rem; display: inline-block;">Take the Plumb Type quiz &rarr;</a>
-        <a href="https://plumbmethod.com" style="margin-top: 0.5rem; display: inline-block; margin-left: 1.25rem;">plumbmethod.com &rarr;</a>
       </div>
     </div>
   </div>
@@ -503,15 +503,17 @@
 <section id="writing" class="selected">
   <div class="container">
     <div class="section-label">Selected Work</div>
-    <h2 class="section-title">Recent writing, programs, and presentations.</h2>
+    <h2 class="section-title">Scholarship, curricula, and programs.</h2>
+
+    <div class="items-label">Publications &amp; scholarship</div>
     <div class="items">
       <div class="item">
-        <div class="year">2026</div>
-        <div class="title"><em>Athletic Bypass:</em> A Phenomenological Study of Emotional Suppression in Sport Culture</div>
-        <div class="meta">Study &middot; In process</div>
+        <div class="year">In prep.</div>
+        <div class="title">Beyond Co-Researchers: Heuristic Self-Search Inquiry and the Contributions of Sandy Sela-Smith</div>
+        <div class="meta">Manuscript &middot; <em>Journal of Humanistic Psychology</em></div>
       </div>
       <div class="item">
-        <div class="year">2026</div>
+        <div class="year">2025</div>
         <div class="title">
           <em>The Song in Our Bones:</em> Embodiment and the Mind&ndash;Body Practices of Katonah Yoga&reg;
           <div class="item-actions">
@@ -521,50 +523,54 @@
         <div class="meta">Book &middot; Self-published</div>
       </div>
       <div class="item">
-        <div class="year">2025&ndash;</div>
-        <div class="title">Doctoral committee methodologist &mdash; Integrative Social Work, Mind&ndash;Body Medicine, Sport &amp; Performance Psychology</div>
-        <div class="meta">Advising</div>
-      </div>
-      <div class="item">
         <div class="year">2025</div>
         <div class="title">
-          Heuristic Inquiry into Embodiment in Eating Disorder Recovery
+          A Heuristic Self-Search Inquiry into an Embodied Approach in the Experience of Eating Disorder Recovery
           <div class="item-actions">
             <a href="https://www.proquest.com/docview/3192037421" target="_blank" rel="noopener" class="item-action">Read on ProQuest &rarr;</a>
             <span class="item-note">paywalled &mdash; email for a copy</span>
           </div>
         </div>
-        <div class="meta">Doctoral dissertation</div>
-      </div>
-      <div class="item">
-        <div class="year">2025</div>
-        <div class="title">Terra Incognita: Embodiment and Integrative Medicine Seminar Series</div>
-        <div class="meta">Curriculum &middot; Spokane</div>
+        <div class="meta">Doctoral dissertation &middot; Saybrook University</div>
       </div>
       <div class="item">
         <div class="year">2023</div>
         <div class="title">
-          Breathing Practices for Stress and Anxiety Reduction: A Systematic Review
+          Breathing Practices for Stress and Anxiety Reduction: Conceptual Framework of Implementation Guidelines Based on a Systematic Review of the Published Literature
           <div class="item-actions">
-            <a href="https://www.mdpi.com/2076-3425/13/12/1612" target="_blank" rel="noopener" class="item-action">Read the article &rarr;</a>
+            <a href="https://doi.org/10.3390/brainsci13121612" target="_blank" rel="noopener" class="item-action">Read the article &rarr;</a>
           </div>
         </div>
-        <div class="meta">Brain Sciences &middot; Peer-reviewed</div>
+        <div class="meta"><em>Brain Sciences</em>, 13(12) &middot; Peer-reviewed, co-author</div>
+      </div>
+    </div>
+
+    <div class="items-label">Curricula &amp; programs</div>
+    <div class="items">
+      <div class="item">
+        <div class="year">2026</div>
+        <div class="title">The Practice Path: A 16-Class Somatic Education Curriculum</div>
+        <div class="meta">Designer &amp; instructor &middot; Joy Yoga Project</div>
+      </div>
+      <div class="item">
+        <div class="year">2021&ndash;</div>
+        <div class="title">Mind, Body, Spirit Integration Seminar</div>
+        <div class="meta">Facilitator &middot; Saybrook University</div>
+      </div>
+      <div class="item">
+        <div class="year">2015&ndash;25</div>
+        <div class="title">Year of Mindfulness / Mindful Body</div>
+        <div class="meta">Year-long programs &middot; Spokane</div>
       </div>
       <div class="item">
         <div class="year">2022&ndash;23</div>
         <div class="title">Somatic Grief Work Series</div>
-        <div class="meta">Program &middot; Multi-session</div>
+        <div class="meta">Program developer &amp; facilitator</div>
       </div>
       <div class="item">
-        <div class="year">2018&ndash;25</div>
-        <div class="title">The Complete Back: Clinical Somatic Education Workshop</div>
-        <div class="meta">Recurring workshop</div>
-      </div>
-      <div class="item">
-        <div class="year">2016</div>
-        <div class="title">Stress Response Training for Psychiatry Residents</div>
-        <div class="meta">University of Washington Psychiatry Residency</div>
+        <div class="year">2018</div>
+        <div class="title">The Complete Back, informed by Hanna Somatic Education</div>
+        <div class="meta">Program developer &amp; facilitator</div>
       </div>
     </div>
   </div>
@@ -572,8 +578,8 @@
 
 <section id="contact" class="cta">
   <div class="container">
-    <h2>Interested in collaborating, teaching together, or <em>working with me</em>?</h2>
-    <p>I take a limited number of individual clients and welcome inquiries from researchers, programs, and athletes whose work touches embodiment, performance, or integrative health.</p>
+    <h2>Interested in collaborating, teaching together, or <em>inviting a talk</em>?</h2>
+    <p>I welcome inquiries from faculty, programs, and doctoral researchers whose work touches embodiment, qualitative and first-person methods, or somatic education &mdash; including research collaboration, invited lectures, and teaching.</p>
     <a href="mailto:cooley.katherine@gmail.com" class="button">Get in touch</a>
   </div>
 </section>
@@ -585,7 +591,6 @@
       <div style="margin-top: 0.5rem;">Spokane, WA &middot; <a href="mailto:cooley.katherine@gmail.com">cooley.katherine@gmail.com</a></div>
     </div>
     <div>
-      <a href="https://plumbmethod.com">Plumb Method</a> &nbsp;&middot;&nbsp;
       <a href="https://www.joyyogaproject.com">Joy Yoga Project</a> &nbsp;&middot;&nbsp;
       <a href="https://www.linkedin.com/in/scanloncooley">LinkedIn</a> &nbsp;&middot;&nbsp;
       <a href="https://www.saybrook.edu/faculty/byname/katherine_cooley/">Saybrook Faculty</a>
