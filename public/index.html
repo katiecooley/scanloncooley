@@ -234,6 +234,31 @@
     font-weight: 500;
   }
   .area a:hover { color: var(--accent); }
+  .area .area-sub {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--ink); margin: 1.75rem 0 0.5rem;
+  }
+
+  /* Book */
+  .book { background: var(--paper); }
+  .book .grid {
+    display: grid; grid-template-columns: 240px 1fr; gap: 4rem; align-items: start;
+  }
+  .book .cover { width: 240px; height: auto; display: block; box-shadow: 0 12px 32px rgba(26,26,26,0.12); }
+  .book h3 { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 400; line-height: 1.2; margin-bottom: 0.4rem; }
+  .book .subtitle { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 1.5rem; }
+  .book p { font-size: 0.94rem; color: var(--ink-soft); line-height: 1.7; max-width: 60ch; margin-bottom: 1.25rem; }
+  .book .pub { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-soft); }
+  .book .actions a {
+    display: inline-block; margin: 0.5rem 1.75rem 0 0;
+    color: var(--ink); text-decoration: none; font-size: 0.85rem;
+    text-transform: uppercase; letter-spacing: 0.12em; border-bottom: 1px solid var(--accent);
+  }
+  .book .actions a:hover { color: var(--accent); }
+  @media (max-width: 720px) {
+    .book .grid { grid-template-columns: 1fr; gap: 2rem; }
+    .book .cover { width: 180px; }
+  }
 
   /* Selected work */
   .selected { background: var(--ink); color: var(--paper); }
@@ -376,6 +401,7 @@
     <div class="logo">Katherine Scanlon Cooley<span style="color: var(--ink-soft); font-weight: 400;">, PhD</span></div>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#book">Book</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#writing">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -398,10 +424,6 @@
       <div class="value">Saybrook University</div>
     </div>
     <div class="cred">
-      <div class="label">Athletics</div>
-      <div class="value">USA National Team &middot; World Gold Medalist</div>
-    </div>
-    <div class="cred">
       <div class="label">Based in</div>
       <div class="value">Spokane, WA</div>
     </div>
@@ -422,23 +444,49 @@
   </div>
 </section>
 
+<section id="book" class="book">
+  <div class="container">
+    <div class="grid">
+      <img class="cover" src="song-in-our-bones-cover.jpg" alt="Cover of The Song in Our Bones by Katherine Cooley, PhD">
+      <div>
+        <div class="section-label">Book</div>
+        <h3>The Song in Our Bones</h3>
+        <div class="subtitle">Embodiment and the Mind-Body Practices of Katonah Yoga&reg;</div>
+        <p>An account of embodiment as an ongoing process, one involving biology, psychology, and environment, and of the practices that help us inhabit it. Written across years of teaching and doctoral research, it brings phenomenology and somatic inquiry together with the mind-body practices of Katonah Yoga&reg;.</p>
+        <p class="pub">Self-published &middot; 2025 &middot; Foreword by Dages Juvelier Keates</p>
+        <div class="actions">
+          <a href="https://www.songinourbones.com" target="_blank" rel="noopener">Read it at songinourbones.com &rarr;</a>
+          <a href="song-in-our-bones-sample.pdf" target="_blank" rel="noopener">Read a sample (PDF) &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="work" class="work">
   <div class="container">
     <div class="section-label">Areas of Work</div>
     <h2 class="section-title">The mind-body dialogue.</h2>
     <div class="areas">
       <div class="area">
-        <div class="number">01 &mdash; Research</div>
-        <h3>Embodiment &amp; performance research</h3>
-        <p>Peer-reviewed work on stress regulation, breathwork, and the somatic dimensions of identity. Current study: <em>Athletic Bypass</em> &mdash; a phenomenological inquiry into emotional suppression in sport culture.</p>
-        <p style="margin-top: 1rem; font-size: 0.92rem;">Methodologist for doctoral candidates in integrative social work, mind-body medicine, and sport psychology.</p>
-        <a href="#writing">Read selected work &rarr;</a>
+        <div class="number">01 &mdash; Teaching</div>
+        <h3>Teaching &amp; doctoral mentorship</h3>
+        <p>My teaching begins with listening &mdash; to students, to the questions emerging in their work, and to the forms of knowing that are not yet fully articulated.</p>
+        <p>At Saybrook University, I teach graduate courses in mind-body medicine, imagery, movement modalities, and integrative wellness coaching. I also serve on doctoral dissertation committees as a methodologist and advise students developing their qualifying research.</p>
+        <p>My approach brings methodological rigor together with experiential learning, supporting students as they develop their scholarly voice and investigate the relationship between lived experience and theoretical understanding.</p>
+        <p class="area-sub">Selected original curriculum</p>
+        <p><strong>The Practice Path</strong> &mdash; a 16-class somatic education program integrating phenomenology, Taoist philosophy, movement, reflective writing, and embodied inquiry. The curriculum explores how somatic resources can help reorganize perception and habitual patterns of responding.</p>
+        <a href="https://www.saybrook.edu/faculty/byname/katherine_cooley/" target="_blank" rel="noopener">Saybrook faculty page &rarr;</a>
       </div>
       <div class="area">
-        <div class="number">02 &mdash; Teaching</div>
-        <h3>Graduate &amp; professional education</h3>
-        <p>Adjunct faculty at Saybrook University teaching Intermediate Coaching, Advanced Coaching Practicum, and Mind-Body Therapies. Adjunct faculty University of Western States, Sports Performance and Psychology. Program developer of the Terra Incognita seminar series on integrative medicine.</p>
-        <a href="#teaching">Courses &amp; programs &rarr;</a>
+        <div class="number">02 &mdash; Research</div>
+        <h3>Embodied experience &amp; psychological life</h3>
+        <p><strong>Embodied experience and psychological life.</strong> My doctoral research, a heuristic inquiry into embodiment in eating disorder recovery, and the Self-Emergence Framework that came out of it; questions of self-alienation and emotional experience.</p>
+        <p><strong>Qualitative and first-person methodology.</strong> Heuristic self-search inquiry in the tradition of Sandy Sela-Smith, phenomenology, and mentoring doctoral researchers in these methods.</p>
+        <p><strong>Somatic education and embodied learning.</strong> My book, original curricula, and work connecting somatic traditions with psychological inquiry.</p>
+        <p class="area-sub">Emerging project</p>
+        <p><em>Athletic Bypass</em> &mdash; a phenomenological study of emotional suppression in sport culture, now in process.</p>
+        <a href="#writing">Read selected work &rarr;</a>
       </div>
       <div class="area">
         <div class="number">03 &mdash; Practice</div>
@@ -465,11 +513,12 @@
       <div class="item">
         <div class="year">2026</div>
         <div class="title">
-          <em>The Song in Our Bones:</em> Embodiment, Meaning, and the Mind&ndash;Body Practices of Katonah Yoga
+          <em>The Song in Our Bones:</em> Embodiment and the Mind&ndash;Body Practices of Katonah Yoga&reg;
           <div class="item-actions">
-<a href="song-in-our-bones-sample.pdf" target="_blank" rel="noopener" class="item-action">Read a sample &rarr;</a>          </div>
+            <a href="#book" class="item-action">About the book &rarr;</a>
+          </div>
         </div>
-        <div class="meta">Book &middot; In preparation</div>
+        <div class="meta">Book &middot; Self-published</div>
       </div>
       <div class="item">
         <div class="year">2025&ndash;</div>
